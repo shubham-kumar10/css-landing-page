@@ -28,3 +28,26 @@ body {
 		animation: moveInRight 1s;
 	}
 }
+
+.heading-secondary {
+	font-size: 3.5rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	background-image: linear-gradient(to right, $color-light-green, $color-dark-green);
+	-webkit-background-clip: text;
+	color: transparent;
+}
+
+.heading-tertiary {
+	font-size: 1.6rem;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.paragraph {
+	font-size: 1.6rem;
+
+	&:not(:last-child) {
+		margin-bottom: 3rem;
+	}
+}
