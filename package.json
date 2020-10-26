@@ -1,0 +1,22 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "Landing page using CSS/SCSS",
+  "main": "index.js",
+  "scripts": {
+    "sass:c": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shubham-kumar10/css-landing-page.git"
+  },
+  "author": "Shubham",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shubham-kumar10/css-landing-page/issues"
+  },
+  "homepage": "https://github.com/shubham-kumar10/css-landing-page#readme",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
