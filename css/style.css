@@ -100,6 +100,9 @@ body {
 .u-margin-bottom-medium {
   margin-bottom: 2.5rem; }
 
+.u-margin-top-big {
+  margin-top: 5rem; }
+
 .section-about {
   background-color: #f7f7f7;
   padding: 25rem 0;
@@ -154,17 +157,17 @@ body {
   .row [class^="col-"] {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
-      margin-right: 4vh; }
+      margin-right: 6rem; }
   .row .col-1-of-2 {
-    width: calc((100% - 4vh) / 2); }
+    width: calc((100% - 6rem) / 2); }
   .row .col-1-of-3 {
-    width: calc((100% - 2 *4vh) / 3); }
+    width: calc((100% - 2 *6rem) / 3); }
   .row .col-1-of-4 {
-    width: calc((100% - 3 *4vh) / 4); }
+    width: calc((100% - 3 *6rem) / 4); }
   .row .col-2-of-3 {
-    width: calc(2 * ((100% - 2 * 4vh) / 3) + 4vh); }
+    width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem); }
   .row .col-3-of-4 {
-    width: calc(3 * ((100% - 3 * 4vh) / 4) + 2 *4vh); }
+    width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 *6rem); }
 
 .btn:hover {
   transform: translateY(-3px);
@@ -205,6 +208,14 @@ body {
   .btn-white::after {
     background-color: white; }
   .btn-white-animation {
+    animation: moveInButton 0.7s 0.5s backwards; }
+
+.btn-green {
+  background-color: #55c57a;
+  color: white; }
+  .btn-green::after {
+    background-color: #55c57a; }
+  .btn-green-animation {
     animation: moveInButton 0.7s 0.5s backwards; }
 
 .btn-text:link, .btn-text:visited {
@@ -268,6 +279,95 @@ body {
     color: transparent; }
   .feature-box:hover {
     transform: translateY(-1.5rem) scale(1.05); }
+
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 35rem; }
+  .card__side {
+    height: 35rem;
+    transition: all 0.8s ease;
+    position: absolute;
+    width: 75%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    top: 0;
+    left: 0; }
+    .card__side--front {
+      background-color: white; }
+    .card__side--back {
+      transform: rotateY(180deg); }
+      .card__side--back-1 {
+        background-image: linear-gradient(to bottom right, #ffb900, #ff7730); }
+      .card__side--back-2 {
+        background-image: linear-gradient(to bottom right, #7ed56f, #28b485); }
+      .card__side--back-3 {
+        background-image: linear-gradient(to bottom right, #2998ff, #5643fa); }
+  .card:hover .card__side--front {
+    transform: rotateY(-180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0deg); }
+  .card__picture {
+    background-size: cover;
+    height: 15rem;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    background-blend-mode: screen; }
+    .card__picture--1 {
+      background-image: linear-gradient(to bottom right, #ffb900, #ff7730), url(../../img/nat-5.jpg); }
+    .card__picture--2 {
+      background-image: linear-gradient(to bottom right, #7ed56f, #28b485), url(../../img/nat-6.jpg); }
+    .card__picture--3 {
+      background-image: linear-gradient(to bottom right, #2998ff, #5643fa), url(../../img/nat-7.jpg); }
+  .card__heading {
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: white;
+    position: absolute;
+    top: 8rem;
+    right: 2rem;
+    text-align: right; }
+  .card__heading-span {
+    padding: 1rem 1.3rem;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone; }
+    .card__heading-span--1 {
+      background-image: linear-gradient(to bottom right, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
+    .card__heading-span--2 {
+      background-image: linear-gradient(to bottom right, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85)); }
+    .card__heading-span--3 {
+      background-image: linear-gradient(to bottom right, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85)); }
+  .card__details ul {
+    list-style: none;
+    width: 60%;
+    margin: 0 auto; }
+    .card__details ul li {
+      text-align: center;
+      font-size: 1.3rem;
+      padding: 0.8rem; }
+      .card__details ul li:not(:last-child) {
+        border-bottom: 1px solid #eee; }
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%; }
+  .card__price-box {
+    text-align: center;
+    color: white;
+    margin-bottom: 4rem; }
+  .card__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase; }
+  .card__price-value {
+    font-size: 4rem;
+    font-weight: 200; }
 
 body {
   font-family: "Lato", sans-serif;

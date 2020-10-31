@@ -48,6 +48,18 @@
 			animation: moveInButton 0.7s 0.5s backwards;
 		}
 	}
+
+	&-green {
+		background-color: $color-medium-green;
+		color: white;
+
+		&::after {
+			background-color: $color-medium-green;
+		}
+		&-animation {
+			animation: moveInButton 0.7s 0.5s backwards;
+		}
+	}
 }
 
 .btn-text {

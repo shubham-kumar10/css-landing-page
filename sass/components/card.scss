@@ -1,0 +1,153 @@
+.card {
+	perspective: 150rem;
+	-moz-perspective: 150rem;
+	position: relative;
+	height: 35rem;
+
+	&__side {
+		height: 35rem;
+		transition: all 0.8s ease;
+		position: absolute;
+		width: 75%;
+		backface-visibility: hidden;
+		border-radius: 3px;
+		overflow: hidden;
+		box-shadow: 0 1.5rem 4rem rgba($color: #000000, $alpha: 0.15);
+		top: 0;
+		left: 0;
+
+		&--front {
+			background-color: white;
+		}
+
+		&--back {
+			transform: rotateY(180deg);
+
+			&-1 {
+				background-image: linear-gradient(to bottom right, $color-secondary-light, $color-secondary-dark);
+			}
+
+			&-2 {
+				background-image: linear-gradient(to bottom right, $color-light-green, $color-dark-green);
+			}
+
+			&-3 {
+				background-image: linear-gradient(to bottom right, $color-tertiary-light, $color-tertiary-dark);
+			}
+		}
+	}
+
+	&:hover &__side--front {
+		transform: rotateY(-180deg);
+	}
+
+	&:hover &__side--back {
+		transform: rotateY(0deg);
+	}
+
+	&__picture {
+		background-size: cover;
+		height: 15rem;
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+		clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+		background-blend-mode: screen;
+
+		&--1 {
+			background-image: linear-gradient(to bottom right, $color-secondary-light, $color-secondary-dark),
+				url(../../img/nat-5.jpg);
+		}
+
+		&--2 {
+			background-image: linear-gradient(to bottom right, $color-light-green, $color-dark-green),
+				url(../../img/nat-6.jpg);
+		}
+
+		&--3 {
+			background-image: linear-gradient(to bottom right, $color-tertiary-light, $color-tertiary-dark),
+				url(../../img/nat-7.jpg);
+		}
+	}
+
+	&__heading {
+		font-size: 2rem;
+		font-weight: 300;
+		text-transform: uppercase;
+		color: white;
+		position: absolute;
+		top: 8rem;
+		right: 2rem;
+		text-align: right;
+	}
+
+	&__heading-span {
+		padding: 1rem 1.3rem;
+		box-decoration-break: clone;
+		-webkit-box-decoration-break: clone;
+
+		&--1 {
+			background-image: linear-gradient(
+				to bottom right,
+				rgba($color-secondary-light, 0.85),
+				rgba($color-secondary-dark, 0.85)
+			);
+		}
+
+		&--2 {
+			background-image: linear-gradient(
+				to bottom right,
+				rgba($color-light-green, 0.85),
+				rgba($color-dark-green, 0.85)
+			);
+		}
+
+		&--3 {
+			background-image: linear-gradient(
+				to bottom right,
+				rgba($color-tertiary-light, 0.85),
+				rgba($color-tertiary-dark, 0.85)
+			);
+		}
+	}
+
+	&__details {
+		ul {
+			list-style: none;
+			width: 60%;
+			margin: 0 auto;
+			li {
+				text-align: center;
+				font-size: 1.3rem;
+				padding: 0.8rem;
+
+				&:not(:last-child) {
+					border-bottom: 1px solid #eee;
+				}
+			}
+		}
+	}
+
+	&__cta {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		width: 90%;
+	}
+
+	&__price-box {
+		text-align: center;
+		color: white;
+		margin-bottom: 4rem;
+	}
+
+	&__price-only {
+		font-size: 1.4rem;
+		text-transform: uppercase;
+	}
+
+	&__price-value {
+		font-size: 4rem;
+		font-weight: 200;
+	}
+}
