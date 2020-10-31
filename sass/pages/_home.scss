@@ -27,6 +27,27 @@
 }
 
 .section-stories {
+	position: relative;
 	padding: 10rem 0;
-	background-color: beige;
+}
+
+.section-book {
+	padding: 15rem 0;
+	background-image: linear-gradient(to right bottom, $color-light-green, $color-dark-green);
+}
+
+.book {
+	background-image: linear-gradient(105deg, rgba(white, 0.8) 0%, rgba(white, 0.8) 50%, transparent 50%),
+		url(../../img/nat-10.jpg);
+	background-size: cover;
+	border-radius: 3px;
+	box-shadow: 0 1rem 4rem rgba(black, 0.5);
+
+	height: 40rem;
+	/* or use 100% same as cover*/
+
+	&__form {
+		width: 50%;
+		padding: 6rem;
+	}
 }
