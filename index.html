@@ -359,12 +359,32 @@
                             </h2>
                             <div class="form__group">
                                 <input type="text" class="form__input" placeholder="Full Name" required>
-                                <label for="name" class="form__input">Full Name</label>
+                                <label for="name" class="form__label">Full Name</label>
                             </div>
 
                             <div class="form__group">
                                 <input type="email" class="form__input" placeholder="Email" required>
                                 <label for="email" class="form__label">Email</label>
+                            </div>
+                            <div class="form__group">
+                                <div class="form__radio-group">
+                                    <input type="radio" class="form__radio-input" id="small" name="formgroup">
+                                    <label for="small" class="form__radio-label">
+                                        <span class="form__radio-button"></span>
+                                        Small tour group
+                                    </label>
+                                </div>
+                                <div class="form__radio-group">
+                                    <input type="radio" class="form__radio-input" id="large" name="formgroup">
+                                    <label for="large" class="form__radio-label">
+                                        <span class="form__radio-button"></span>
+                                        Large tour group
+                                    </label>
+                                </div>
+
+                            </div>
+                            <div class="form__group">
+                                <button class="btn btn-green">Next Step &rarr;</button>
                             </div>
                         </form>
                     </div>
@@ -372,6 +392,44 @@
             </div>
         </section>
     </main>
+
+    <footer class="footer">
+        <div class="footer__logo-box">
+            <img src="./img/logo-green-small-2x.png" alt="logo" class="footer__logo">
+        </div>
+        <div class="row">
+            <div class="col-1-of-2">
+                <div class="footer__navigation">
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Company</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Contact Us</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Careers</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Privacy policy</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Terms</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-1-of-2">
+                <p class="footer__copyright">
+                    Built by <a href="#" class="footer__link">Shubham Kumar</a> for his portfolio <a href="#"
+                        class="footer__link">Example of CSS & SASS</a>.
+                    Copyright &copy; by Shubham Kumar. You are 100% allowed to use this webpage for both personal
+                    and commercial use, but NOT to claim it as your own design. A credit to the original author, Shubham
+                    Kumar, is of course highly appreciated!
+                </p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 
