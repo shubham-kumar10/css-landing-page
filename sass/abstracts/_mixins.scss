@@ -12,3 +12,55 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
+
+/*
+
+Screen Sizes:
+
+	0 - 600px - Phone
+	600 - 900px - Tablet portrait
+	900 - 1200px - Tablet landscape
+	1200 - 1600px - Desktop (Current Design)
+	1800+ - Big Screens
+
+Relative Values in em:
+
+	For base font-size of 16px:
+	0 - 37.5em - Phone
+	37.5 - 56.25em - Tablet portrait
+	56.25 - 75em - Tablet landscape
+	75 - 112.5em - Desktop (Current Design)
+	112em+ - Big Screens
+
+MEDIA QUERIES
+
+	@mixin respond-phone {
+		@media (max-width: 600px) {
+			@content
+		}
+}
+
+*/
+
+@mixin respond($breakpoint) {
+	@if $breakpoint == phone {
+		@media (max-width: $phone-size) {
+			@content;
+		}
+	}
+	@if $breakpoint == tab-port {
+		@media (max-width: $tab-port) {
+			@content;
+		}
+	}
+	@if $breakpoint == tab-land {
+		@media (max-width: $tab-land) {
+			@content;
+		}
+	}
+	@if $breakpoint == big-screen {
+		@media (min-width: $big-screen) {
+			@content;
+		}
+	}
+}

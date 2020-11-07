@@ -6,16 +6,57 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+/*
+
+Screen Sizes:
+
+	0 - 600px - Phone
+	600 - 900px - Tablet portrait
+	900 - 1200px - Tablet landscape
+	1200 - 1600px - Desktop (Current Design)
+	1800+ - Big Screens
+
+Relative Values in em:
+
+	For base font-size of 16px:
+	0 - 37.5em - Phone
+	37.5 - 56.25em - Tablet portrait
+	56.25 - 75em - Tablet landscape
+	75 - 112.5em - Desktop (Current Design)
+	112em+ - Big Screens
+
+MEDIA QUERIES
+
+	@mixin respond-phone {
+		@media (max-width: 600px) {
+			@content
+		}
+}
+
+*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
 html {
-  font-size: 10px; }
+  font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
+  box-sizing: border-box;
   padding: 30px; }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 @keyframes moveInLeft {
   0% {
@@ -59,16 +100,23 @@ body {
   .heading-primary--main {
     display: block;
     font-weight: 300;
-    font-size: 60px;
-    letter-spacing: 35px;
+    font-size: 6rem;
+    letter-spacing: 3.5rem;
     animation-name: moveInLeft;
     animation-duration: 1s; }
+    @media (max-width: 37.5em) {
+      .heading-primary--main {
+        letter-spacing: 1rem;
+        font-size: 50px; } }
   .heading-primary--sub {
     display: block;
     font-weight: 400;
     font-size: 20px;
     letter-spacing: 17.5px;
     animation: moveInRight 1s; }
+    @media (max-width: 37.5em) {
+      .heading-primary--sub {
+        letter-spacing: 0.5rem; } }
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -77,6 +125,12 @@ body {
   background-image: linear-gradient(to right, #7ed56f, #28b485);
   -webkit-background-clip: text;
   color: transparent; }
+  @media (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 3rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2.8rem; } }
 
 .heading-tertiary {
   font-size: 1.6rem;
@@ -169,6 +223,9 @@ body {
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
+    @media (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 6rem; } }
   .row::after {
     content: "";
     display: table;
@@ -177,6 +234,13 @@ body {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
+      @media (max-width: 56.25em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 6rem; } }
+    @media (max-width: 56.25em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
   .row .col-1-of-2 {
     width: calc((100% - 6rem) / 2); }
   .row .col-1-of-3 {
@@ -189,7 +253,8 @@ body {
     width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 *6rem); }
 
 .navigation__checkbox {
-  visibility: hidden; }
+  visibility: hidden;
+  display: none; }
 
 .navigation__button {
   background-color: white;
@@ -727,16 +792,23 @@ body {
   .heading-primary--main {
     display: block;
     font-weight: 300;
-    font-size: 60px;
-    letter-spacing: 35px;
+    font-size: 6rem;
+    letter-spacing: 3.5rem;
     animation-name: moveInLeft;
     animation-duration: 1s; }
+    @media (max-width: 37.5em) {
+      .heading-primary--main {
+        letter-spacing: 1rem;
+        font-size: 50px; } }
   .heading-primary--sub {
     display: block;
     font-weight: 400;
     font-size: 20px;
     letter-spacing: 17.5px;
     animation: moveInRight 1s; }
+    @media (max-width: 37.5em) {
+      .heading-primary--sub {
+        letter-spacing: 0.5rem; } }
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -745,6 +817,12 @@ body {
   background-image: linear-gradient(to right, #7ed56f, #28b485);
   -webkit-background-clip: text;
   color: transparent; }
+  @media (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 3rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2.8rem; } }
 
 .heading-tertiary {
   font-size: 1.6rem;
